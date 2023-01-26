@@ -1,0 +1,29 @@
+PATH
+  remote: .
+  specs:
+    index_checker (1.0.0)
+      erb
+      launchy
+      pg
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
+    cgi (0.3.6)
+    erb (4.0.2)
+      cgi (>= 0.3.3)
+    launchy (2.5.2)
+      addressable (~> 2.8)
+    pg (1.4.5)
+    public_suffix (5.0.1)
+
+PLATFORMS
+  x86_64-darwin-20
+
+DEPENDENCIES
+  index_checker!
+
+BUNDLED WITH
+   2.3.14

@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+  <table>
+    <tr>
+      <tr>
+        <th> Table Name </th>
+        <th> Index Name </th>
+        <th style="width: 150px"> Write actions </th>
+        <th style="width: 150px"> Read actions </th>
+        <th style="width: 150px"> Sequence Scan </th>
+        <th style="width: 150px"> Index Scan </th>
+        <th style="width: 150px"> Index Size </th>
+      </tr>
+    </tr>
+    <% @results.each do |r| %>
+      <tr>
+        <td> <%= r['relname'] %> </td>
+        <td> <%= r['indexrelname']%></td>
+        <td style="width: 100px; text-align: center"> <%= r['write_actions'] %> </td>
+        <td style="width: 100px; text-align: center"> <%= r['read_actions'] %> </td>
+        <td style="width: 100px; text-align: center"> <%= r['seq_scan'] %> </td>
+        <td style="width: 100px; text-align: center"> <%= r['idx_scan'] %> </td>
+        <td style="width: 100px; text-align: center"> <%= r['idx_size'] %> </td>
+      </tr>
+    <% end %>
+  </table>
+</BODY>
+</HTML>
