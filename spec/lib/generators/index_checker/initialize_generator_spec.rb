@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative '../../../../lib/generators/index_checker/initializer_generator'
+require_relative '../../../../lib/generators/index_checker/initialize_generator'
 
-describe IndexChecker::Generators::InitializerGenerator do
+describe IndexChecker::Generators::InitializeGenerator do
   before :all do
     remove_config_file
     remove_report_file
