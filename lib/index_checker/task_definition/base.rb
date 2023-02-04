@@ -1,29 +1,43 @@
+# frozen_string_literal: true
+
 module IndexChecker
   module TaskDefinition
     class Base
-      def write_results_to_file
-        template = File.read(result_template_path)
-        html_result = ERB.new(template).result(binding)
-    
-        File.open(result_file_path, 'w+') do |f|
-          f.write html_result
+      class << self
+        def postgres_connection
+          dbname = IndexChecker.dbname
+          user = IndexChecker.user
+          password = IndexChecker.password
+
+          begin
+            PG.connect(dbname: dbname, user: user, password: password)
+          rescue Exception => e
+            puts e
+          end
         end
-      end
 
-      def open_file_in_browser(path)
-        Launchy::Browser.run(path)
-      end
-    
-      def result_template_path
-        "#{gem_root_path}/lib/report_template.html.erb"
-      end
+        def write_results_to_file
+          template = File.read(result_template_path)
+          html_result = ERB.new(template).result(binding)
 
-      def result_file_path
-        "#{gem_root_path}/indexes.html"
-      end
+          File.write(result_file_path, html_result)
+        end
 
-      def gem_root_path
-        Dir.pwd
+        def open_file_in_browser(path)
+          Launchy::Browser.run(path)
+        end
+
+        def result_template_path
+          "#{gem_root_path}lib/report_template.html.erb"
+        end
+
+        def result_file_path
+          "#{Rails.root}/index_checker/general_report.html"
+        end
+
+        def gem_root_path
+          __FILE__.gsub('lib/index_checker/task_definition/base.rb', '')
+        end
       end
     end
   end

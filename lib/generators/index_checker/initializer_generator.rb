@@ -11,6 +11,12 @@ module IndexChecker
       def copy_config
         template 'index_checker_config.rb', "#{Rails.root}/config/index_checker.rb"
       end
+
+      desc 'Create a IndexChecker folder'
+      def create_initializer_file
+        create_file "#{Rails.root}/index_checker/general_report.html",
+                    'Result of rake index_checker::analysis will be shown here ...'
+      end
     end
   end
 end

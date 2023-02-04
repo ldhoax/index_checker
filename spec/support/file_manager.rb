@@ -15,6 +15,10 @@ module FileManager
     FileUtils.remove_file config_file if File.file?(config_file)
   end
 
+  def remove_report_file
+    FileUtils.remove_file report_file if File.file?(report_file)
+  end
+
   def add_config
     data = <<~DATA
       require 'index_checker'
