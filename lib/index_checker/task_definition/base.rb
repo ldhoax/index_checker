@@ -9,6 +9,7 @@ module IndexChecker
           user = IndexChecker.user
           password = IndexChecker.password
 
+          puts "You are connecting to #{dbname} database as #{user} role"
           begin
             PG.connect(dbname: dbname, user: user, password: password)
           rescue Exception => e
@@ -24,7 +25,7 @@ module IndexChecker
         end
 
         def open_file_in_browser(path)
-          Launchy::Browser.run(path)
+          Launchy.open(path)
         end
 
         def result_template_path
