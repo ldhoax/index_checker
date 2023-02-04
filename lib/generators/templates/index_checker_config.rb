@@ -11,12 +11,12 @@ IndexChecker.config do |c|
 
   # user    : optional.
   # If the `user` is not provided, it will be the default user (same name as your OS name)
-  c.user = 'your-postgres-username'
+  # c.user = 'your-postgres-username'
 
 
   # password: optional
   # The password just requires if your (Postgres) user authenticates by `md5` method, that is optional for other authentication methods: `trust` or `peer`. Your postgres config in pg_hba.config
-  c.password = 'your-password' 
+  # c.password = 'your-password' 
 
 
   # rdbms   : default  
