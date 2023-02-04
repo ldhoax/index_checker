@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'index_checker'
 IndexChecker.config do |c|
   c.rdbms = 'postgres'
