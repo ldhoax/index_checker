@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    index_checker (1.0.0)
+    index_checker (1.0.16)
       erb (~> 4.0)
       launchy (~> 2.5)
       pg (~> 1.1)
