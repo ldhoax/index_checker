@@ -3,12 +3,14 @@ require File.expand_path('lib/index_checker/version', __dir__)
 Gem::Specification.new do |s|
   s.name        = 'index_checker'
   s.version     = IndexChecker::VERSION
+  s.platform    = Gem::Platform::RUBY
   s.summary     = 'Index Checker'
-  s.description = 'A simple ruby gem for view statistic information abount index'
-  s.authors     = ['Lê Đức Hoà']
+  s.description = 'A simple Ruby gem for Index statistic information checking'
+  s.authors     = ['Le Duc Hoa']
   s.email       = 'leduchoabatr12@gmail.com'
   s.files       = Dir['lib/report_template.html.erb', 'lib/**/*.rb', 'lib/**/*.rake', 'index_checker.gemspec',
                       'Gemfile', 'Rakefile']
+  s.required_ruby_version = '>= 2.5.0'
   s.homepage    =
     'https://github.com/dontregret9/index_checker'
   s.license = 'MIT'

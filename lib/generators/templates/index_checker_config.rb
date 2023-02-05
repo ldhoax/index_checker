@@ -15,7 +15,9 @@ IndexChecker.config do |c|
 
 
   # password: optional
-  # The password just requires if your (Postgres) user authenticates by `md5` method, that is optional for other authentication methods: `trust` or `peer`. Your postgres config in pg_hba.config
+  # The password just requires if your (Postgres) user authenticates by `md5` method,
+  # that is optional for other authentication methods: `trust` or `peer`. 
+  # Your postgres config can be found in pg_hba.config
   # c.password = 'your-password' 
 
 

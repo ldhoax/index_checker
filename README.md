@@ -91,7 +91,8 @@ bundle exec rake index_checker:analysis
 
 
 ### Thank you
-I hope this simple gem will be useful for us :heart:
+I hope this simple gem will helpful for us :heart:
+
 If you found any problems in source code (mistyped, code smell, wrong queries,...), please help me correct and optimize them. Thanks a lot! :pray:
 
 ### What's next
@@ -100,5 +101,7 @@ Now, IndexChecker just
   - generate some very basic Index information!
 
 So, I will implement for more Relative Database Management Systems and add features like detect redundant indexes, unused indexes, evaluate the effectiveness of indexes,...
+
 I hope to get help from you! :hugs:
+
 Thank you again.
