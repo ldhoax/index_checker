@@ -91,9 +91,9 @@ bundle exec rake index_checker:analysis
 
 
 ### Thank you
-I hope this simple gem will helpful for us :heart:
+I hope this simple gem will helpful for you :heart:
 
-If you found any problems in source code (mistyped, code smell, wrong queries,...), please help me correct and optimize them. Thanks a lot! :pray:
+If you found any problems in source code (mistyped, code smell, wrong queries,...), please don't hesitate to correct me. Thanks a lot! :pray:
 
 ### What's next
 Now, IndexChecker just 
